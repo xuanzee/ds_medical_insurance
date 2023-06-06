@@ -144,7 +144,8 @@ Male = [len(list_of_age_m), round(list_item_avg(list_of_age_m)), list_item_perce
 	list_item_percentage(list_of_smoker_m, 'no'), round(list_item_avg(list_of_bmi_m), 1), majority_item(list_of_region_m)]
 
 #Describe data
-print('\nCategory:', Categories)
+print('\n1.')
+print('Category:', Categories)
 print('All:', All)
 print('Female:', Female)
 print('Male:', Male)
@@ -154,13 +155,15 @@ print('\nAverage cost: $' + str(list_item_avg(list_of_charges)))
 print('% of female participants: ' + list_item_percentage(list_of_sex, 'female'))
 
 #General average cost comparison as a baseline reference.
-print('\nAverage cost for a female: $' + str(list_item_avg(list_of_charges_f)))
+print('\n2.')
+print('Average cost for a female: $' + str(list_item_avg(list_of_charges_f)))
 print('Average cost for a male: $' + str(list_item_avg(list_of_charges_m)))
 print('Female vs. Male: ' + calc_diff_percent(list_item_avg(list_of_charges_f),
 	list_item_avg(list_of_charges_m)))
 
 #Average cost comparison for non-smokers (assuming smoking has a big impact on cost)
-print('\nAverage cost for a non-smoking female: $' + str(list_item_avg(list_of_charges_f_ns)))
+print('\n3.')
+print('Average cost for a non-smoking female: $' + str(list_item_avg(list_of_charges_f_ns)))
 print('Average cost for a non-smoking male: $' + str(list_item_avg(list_of_charges_m_ns)))
 print('Female vs. Male: ' + calc_diff_percent(list_item_avg(list_of_charges_f_ns),
 	list_item_avg(list_of_charges_m_ns)))
@@ -169,4 +172,13 @@ print('Female vs. Male: ' + calc_diff_percent(list_item_avg(list_of_charges_f_ns
 print('\nAverage cost for a non-smoking female with children: $' + str(list_item_avg(list_of_charges_f_ns_c)))
 print('Average cost for a non-smoking male with children: $' + str(list_item_avg(list_of_charges_m_ns_c)))
 print('Female vs. Male: ' + calc_diff_percent(list_item_avg(list_of_charges_f_ns_c),
-	list_item_avg(list_of_charges_m_ns_c)) +'\n')
+	list_item_avg(list_of_charges_m_ns_c)))
+
+#Cost percentage change comparison for when the children condition is added.
+print('\nPercentage change in cost for non-smokers when the children element is added:')
+print('Female: ' + calc_diff_percent(list_item_avg(list_of_charges_f_ns_c), list_item_avg(list_of_charges_f_ns)))
+print('Male: ' + calc_diff_percent(list_item_avg(list_of_charges_m_ns_c), list_item_avg(list_of_charges_m_ns)))
+
+#Average age comparison for non-smokers with children
+print('\nAverage age for a non-smoking female with children:', round(list_item_avg(list_of_age_f_ns_c)))
+print('Average age for a non-smoking male with children:', round(list_item_avg(list_of_age_m_ns_c)))
