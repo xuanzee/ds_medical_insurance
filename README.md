@@ -15,5 +15,5 @@ Source data file.
 	* To examine the impact of sex variable alone and lessen the influence of other variables, some efforts were made to make the female samples and male samples more similar, e.g., only looking at non-smokers, checking if sample sizes and average ages are similar, and so on. That said, these simple measures are not rigorous enough, and the other variables are not sufficently controlled.
 	* More sophisticated statistical analyses, such as regression analysis, will help quantify the relationships more accurately.
 
-## us_medical_insurance_costs.ipynb
-Presentation of more comprehensive version of the analysis. To be added later.
+## medical_insurance.ipynb
+Organizing patient data with Python Class. Guided by Codecademy.
